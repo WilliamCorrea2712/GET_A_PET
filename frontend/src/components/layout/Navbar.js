@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import Logo from "../../assets/img/logo.png";
+import Logo from "../../assets/images/logo.png";
 
 /*context*/
 import { Context } from "../../context/UserContext";
@@ -21,7 +21,13 @@ function Navbar() {
         </li>
         {authenticated ? (
           <>
-            <i onClick={logout}>Sair</i>
+            <li>
+              <Link to="/pet/mypets">Meus Pets</Link>
+            </li>
+            <li>
+              <Link to="/user/profile">Perfil</Link>
+            </li>
+            <li onClick={logout}>Sair</li>
           </>
         ) : (
           <>
