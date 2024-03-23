@@ -11,7 +11,7 @@ const imageStorage = multer.diskStorage({
       folder = "pets";
     }
 
-    cb(null, `public/img/${folder}`);
+    cb(null, `public/images/${folder}`);
   },
   filename: function (req, file, cb) {
     cb(
